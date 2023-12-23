@@ -1,5 +1,8 @@
-let primeiroValor = prompt('Primeiro valor:')
-let segundoValor = prompt('Segundo valor:')
+let valor1 = prompt('Primeiro valor:')
+let valor2 = prompt('Segundo valor:')
+
+let primeiroValor = parseFloat(valor1)
+let segundoValor = parseFloat(valor2)
 
 let soma = primeiroValor + segundoValor
 let subtração = primeiroValor - segundoValor
