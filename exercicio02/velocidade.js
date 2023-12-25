@@ -1,5 +1,6 @@
 const nomeVeiculo1 = prompt('Nome do PRIMEIRO veículo:')
 const velocidadeVeiculo1 = parseFloat(prompt('Velocidade ' + nomeVeiculo1 + ":"))
+
 const nomeVeiculo2 = prompt('Nome do SEGUNDO veículo:')
 const velocidadeVeiculo2 = parseFloat(prompt('Velocidade ' + nomeVeiculo2 + ":"))
 
