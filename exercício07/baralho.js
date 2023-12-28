@@ -3,8 +3,8 @@ let opcao = ""
 
 do {
     opcao = prompt(
-        "Cartas no baralho:\n " + baralho.length + 
-        "\N1 - Adicionar uma carta\n2 - Remover uma carta\n3 - Sair"
+        "Cartas no baralho: " + baralho.length + 
+        "\n1 - Adicionar uma carta\n2 - Remover uma carta\n3 - Sair"
     )
 
     switch(opcao) {
@@ -13,14 +13,18 @@ do {
             baralho.push(novaCarta)
             break
         case "2":
-            const removerCarta = baralho.pop
-            if (removerCarta) {
-                
+            const removerCarta = baralho.pop()
+            if (!removerCarta) {
+                alert("Não há nenhuma carta no baralho!")
+            } else {
+                alert("Você puxou um(a) " + removerCarta)
             }
+            break
         case "3":
             alert("Saindo...")
+            break
         default:
             alert("Opção inválida!")
     }
 
-} while (opcao !== "3")
+} while (opcao !== "3");
