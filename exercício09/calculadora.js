@@ -1,12 +1,12 @@
 function calcularAreaTriangulo() {
-    const base = parseFloat(prompt("Informe a base do triângulo:"))
-    const altura = parseFloat(prompt("Informe a altura do triângulo:"))
+    const base = prompt("Informe a base do triângulo:")
+    const altura = prompt("Informe a altura do triângulo:")
     return base * altura / 2
 }
 
 function calcularAreaRetangulo() {
-    const base = parseFloat(prompt("Informe a base do retângulo:"))
-    const altura = parseFloat(prompt("Informe a altura do retângulo:"))
+    const base = prompt("Informe a base do retângulo:")
+    const altura = prompt("Informe a altura do retângulo:")
     return base * altura
 }
 
@@ -18,12 +18,12 @@ function calcularAreaQuadrado() {
 function calcularAreaTrapezio() {
     const baseMenor = parseFloat(prompt("Informe a base menor do trapézio:"))
     const baseMaior = parseFloat(prompt("Informe a base maior do trapézio:"))
-    const altura = parseFloat(prompt("Informe a altura do trapézio:"))
+    const altura = prompt("Informe a altura do trapézio:")
     return (baseMenor + baseMaior) * altura / 2
 }
 
 function calcularAreaCirculo() {
-     const raio = parseFloat(prompt("Informe o raio do círculo:"))
+     const raio = prompt("Informe o raio do círculo:")
      return 3.14 * raio * raio
 }
 
@@ -40,7 +40,7 @@ function exibirMenu() {
 }
 
 function executar() {
-    let Opcao = ""
+    let opcao = ""
 
     do {
         opcao = exibirMenu()
@@ -48,19 +48,19 @@ function executar() {
 
         switch(opcao) {
             case "1":
-            resultado = calcularAreaTriangulo
+            resultado = calcularAreaTriangulo()
                 break
             case "2":
-                resultado = calcularAreaTrapezio
+                resultado = calcularAreaRetangulo()
                 break
             case "3":
-                resultado = calcularAreaRetangulo
+                resultado = calcularAreaQuadrado()
                 break
             case "4":
-                resultado = calcularAreaQuadrado
+                resultado = calcularAreaTrapezio()
                 break
             case "5":
-                resultado = calcularAreaCirculo
+                resultado = calcularAreaCirculo()
                 break
             case "6":
                 alert("Encerrando...")
