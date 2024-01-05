@@ -1,6 +1,7 @@
 function addPlayer() {
     const position = document.getElementById('position').value
-    const name = document.getElementById9('name').value
+    const name = document.getElementById('name').value
+    const number = document.getElementById('number').value
 
     const confirmation = confirm("Escalar " + name + " como "  + position + "?")
 
@@ -21,7 +22,7 @@ function removePlayer() {
     const number = document.getElementById('numberToRemove').value
     const playertoRemove = document.getElementById('player-' + number)
 
-    const confirmation = confirm('Remover o jogador' + playertoRemove.innertext + "?")
+    const confirmation = confirm('Remover o jogador' + playertoRemove.innerText + '?')
 
     if (confirmation) {
         document.getElementById('teamList').removeChild(playertoRemove)
