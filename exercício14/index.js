@@ -18,3 +18,23 @@ function createInput(id, value, name, type= 'text', placeholder = '' ) {
 const addTechBtn = document.getElementById('addTechBtn')
 const devFirm = document.getElementById('devFirm')
 const developers = []
+let inputRows = 0 
+
+addTechBtn.addEventListener('click', function (ev) {
+    const stackInputs = document.getElementById('stackInputs')
+
+    const newRow = document.createElement('li')
+    const rowIndex = inputRows
+    inputRows++
+    newRow.id = 'inputRow' + rowIndex
+    newRow.className =  'inputRow'
+
+    const techNameLabel = createLabel('Nome: ', 'TechName-', + rowIndex)
+    const techNameInput = createInput('techName-' + rowIndex, null, 'techName')
+
+    newRow.append(
+        techNameLabel, techNameInput
+    )
+
+    stackInputs.appendChild(newRow)
+})
