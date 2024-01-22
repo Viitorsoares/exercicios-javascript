@@ -16,7 +16,7 @@ function createInput(id, value, name, type= 'text', placeholder = '' ) {
 }
 
 const addTechBtn = document.getElementById('addTechBtn')
-const devFirm = document.getElementById('devFirm')
+const form = document.getElementById('devFirm')
 const developers = []
 let inputRows = 0 
 
@@ -26,14 +26,26 @@ addTechBtn.addEventListener('click', function (ev) {
     const newRow = document.createElement('li')
     const rowIndex = inputRows
     inputRows++
-    newRow.id = 'inputRow' + rowIndex
-    newRow.className =  'inputRow'
+    newRow.id = 'inputRow-' + rowIndex
+    newRow.className = 'inputRow'
 
-    const techNameLabel = createLabel('Nome: ', 'TechName-', + rowIndex)
+    const techNameLabel = createLabel('Nome: ', 'TechName-' + rowIndex)
     const techNameInput = createInput('techName-' + rowIndex, null, 'techName')
 
+    const expLabel = createLabel('Experiência: ')
+    const id1 = 'expRadio-' + rowIndex + '.1'
+    const expRadio1 = createInput(id1, '0-2 anos', 'techExp-' + rowIndex, 'radio')
+    const expLabel1 = createLabel('0-2 anos', id1)
+    const id2 = 'expRadio-' + rowIndex + '.2'
+    const expRadio2 = createInput(id2, '3-4 anos', 'techExp-' + rowIndex, 'radio')
+    const expLabel2 = createLabel('3-4 anos', id2)
+    const id3 = 'expRadio-' + rowIndex + '.3'
+    const expRadio3 = createInput(id2, '5+ anos', 'techExp-' + rowIndex, 'radio')
+    const expLabel3 = createLabel('5+ anos', id3)
+
+
     newRow.append(
-        techNameLabel, techNameInput
+        techNameLabel, techNameInput, expLabel, expRadio1, expLabel1, expRadio2, expLabel2, expRadio3, expLabel3
     )
 
     stackInputs.appendChild(newRow)
